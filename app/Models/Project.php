@@ -46,7 +46,7 @@ class Project extends Model
             'project_id', //Foreign key in users table..
             'user_id', //Foreign key in tasks table..
             'id', //Local key in project table..
-             'user_id',); //Local key in project table..
+             'user_id',); //SecondLocal key in project table..
     }
     public function task(){
         return $this->hasOneThrough(Task::class, User::class,
